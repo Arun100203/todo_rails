@@ -1,9 +1,27 @@
-<h1>New post</h1>
 
-<%= render "form", post: @post %>
+<style>
+#container1 {
+  margin-left:40%;
+  margin-right:40%;
+  width:fit-content;
+  background-color: black;
+  justify-content:space-around;
+  padding:5px;
+}
 
-<br>
+#form {
+  background-color:white;
+}
+</style>
 
-<div>
+<div id="container1">
+
+<div id="form">
+  <h1>New post</h1>
+  <%= render "form", post: @post %>
+  <button>
   <%= link_to "Back to posts", posts_path %>
+  </button>
+</div>
+
 </div>

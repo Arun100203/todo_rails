@@ -1,3 +1,12 @@
+
+<style>
+  #container {
+    border:1px solid black;
+    width:fit-content;
+    margin:10px;
+  }
+</style>
+
 <%= form_with(model: post) do |form| %>
   <% if post.errors.any? %>
     <div style="color: red">
@@ -11,6 +20,7 @@
     </div>
   <% end %>
 
+  <div id="container">
   <div>
     <%= form.label :title, style: "display: block" %>
     <%= form.text_field :title %>
@@ -23,5 +33,6 @@
 
   <div>
     <%= form.submit %>
+  </div>
   </div>
 <% end %>

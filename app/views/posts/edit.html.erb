@@ -1,5 +1,30 @@
+
+
+<style>
+#container1 {
+  margin-left:40%;
+  margin-right:40%;
+  width:fit-content;
+  background-color: black;
+  justify-content:space-around;
+  padding:5px;
+}
+
+#form {
+  background-color:white;
+}
+
+h1 {
+  color:white;
+}
+
+</style>
+
+
+<div id="container1">
 <h1>Editing post</h1>
 
+<div id="form">
 <%= render "form", post: @post %>
 
 <br>
@@ -7,4 +32,6 @@
 <div>
   <%= link_to "Show this post", @post %> |
   <%= link_to "Back to posts", posts_path %>
+</div>
+</div>
 </div>

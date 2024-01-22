@@ -1,14 +1,53 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Posts</h1>
+<h1 style="text-align:center;"> Blog posts </h1>
+<style>
+  #postpage{
+    align-items:center;
+  }
 
+  #posts {
+    border: 1px solid black;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color:black;
+    justify-content:space-around;
+  }
+
+  #post {
+    flex-basis: 20%;
+    max-height:20%;
+    max-width:25%;
+    padding:10px;
+    margin:10px;
+    text-align:justify;
+    background-color:white;
+    flex-grow:1;
+    border:1px solid black;
+  }
+
+  #newpost {
+    margin:10px;
+    margin-left:45%;
+  }
+</style>
+
+<div id="postpage">
 <div id="posts">
-  <% @posts.each do |post| %>
-    <%= render post %>
-    <p>
-      <%= link_to "Show this post", post %>
-    </p>
-  <% end %>
+<% @posts.each do |post| %>
+  <div id="post">
+  <%= render post %>
+  <button>
+    <%= link_to "Show this post", post %>
+  </button>
+  </div>
+  
+<% end %>
 </div>
 
-<%= link_to "New post", new_post_path %>
+<button id="newpost">
+<h2 ><%= link_to "New post", new_post_path %></h2>
+</button>
+
+</div>
